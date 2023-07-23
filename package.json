@@ -18,6 +18,5 @@
   },
   "devDependencies": {
     "cors": "^2.8.5"
-  },
-  "proxy": "http://localhost:3000"
+  }
 }
