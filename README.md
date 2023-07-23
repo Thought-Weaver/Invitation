@@ -2,7 +2,7 @@
 
 A simple invitation system I made for easily coordinating people coming to my themed dinner parties.
 
-# Overview
+## Technical Overview
 
 To avoid race conditions, the user is presented with a single textbox alongside the theme styling and effects. If the party isn't full, they'll be added to the list; before they join, they can see the list of people who are going to attend, otherwise they'll receive an error message.
 
