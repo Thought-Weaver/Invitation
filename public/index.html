@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <head>
+    <title>Your Invitation</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="RSVP for my latest themed party!">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    
+    <script type="module" src="js/interact.js"></script>
+  </head>
+  
+  <body>
+      <header>
+        <hr/>
+        <h2>You are invited:</h2>
+        <h1>Under the Sea</h1>
+        <hr/>
+      </header>
+
+      <div id="error-container" class="hidden">
+        <p id="error-string"></p>
+      </div>
+
+      <div id="form-container">
+        <img id="anchor" src="./img/005-anchor.png">
+        <img id="ship-wheel" src="./img/019-ship wheel.png">
+        <div id="rsvp-form">
+          <h3>Join the Party</h3>
+          <p id="date">Saturday, September 16th @ 5 PM</p>
+          <p id="description">Themed entertainment and a 5-course meal await! Nautically-inspired attire is recommended.</p>
+          <form id="form" action="#">
+            <input type="text" id="name-input" name="name" placeholder="Your Name" required>
+            <textarea type="text" id="comments-input" name="comments" placeholder="Any dietary restrictions or other comments?"></textarea>
+            <button id="submit-button" type="submit">RSVP</button>
+          </form>
+          <a id="rsvp-list-link" href="./rsvp-list.html">See party attendees list</a>
+        </div>
+      </div>
+
+      <img id="shark" src="./img/031-shark.png">
+      <img id="seaweed1" class="seaweed" src="./img/003-seaweed.png">
+      <img id="seaweed2" class="seaweed" src="./img/003-seaweed.png">
+      <img id="seaweed3" class="seaweed" src="./img/003-seaweed.png">
+      <img id="squid" src="./img/047-squid.png">
+      <img id="seaweed4" class="seaweed" src="./img/003-seaweed.png">
+      <img id="long-seaweed" src="./img/long-seaweed.png">
+      <img id="long-seaweed-2" src="./img/long-seaweed.png">
+      <img id="seahorse-1" src="./img/016-seahorse.png">
+      <img id="seahorse-2" src="./img/016-seahorse.png">
+      <img id="seahorse-3" src="./img/016-seahorse.png">
+
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+  </body>
+</html>

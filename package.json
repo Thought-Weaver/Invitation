@@ -1,0 +1,23 @@
+{
+  "name": "invitation",
+  "version": "0.1.0",
+  "description": "The API for Logan Apple's invitation system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Logan Apple",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "globby": "^11.0.3",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2",
+    "winston": "^3.4.0"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5"
+  },
+  "proxy": "http://localhost:3000"
+}
