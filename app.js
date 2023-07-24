@@ -7,6 +7,7 @@
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const express = require("express");
+const https = require("https");
 const fs = require("fs").promises;
 const winston = require("winston");
 
@@ -36,13 +37,12 @@ const logger = winston.createLogger({
  * APP SETUP
  *************************************************************/
 
-app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ strict: false }));
 app.use(cors());
 
 app.use((req, res, next) => {
-    const allowedOrigins = ["https://loganapple.com", "http://127.0.0.1:3000", "http://localhost:3000", "http://127.0.0.1:8000", "http://localhost:8000"];
+    const allowedOrigins = ["https://invitation.loganservers.com"];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
          res.setHeader("Access-Control-Allow-Origin", origin);
@@ -207,4 +207,15 @@ app.post("/rsvp/:theme/:name", async (req, res) => {
  * START APP
  *************************************************************/
 
-app.listen(PORT);
+const startServer = async () => {
+    try {
+      const key = await fs.readFile("server.key");
+      const cert = await fs.readFile("server.cert");
+  
+      https.createServer({ key, cert }, app).listen(PORT);
+    } catch (err) {
+        logError("Error starting server!", err);
+    }
+};
+
+startServer();

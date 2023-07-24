@@ -45,7 +45,7 @@ export function submitRSVP() {
         body: { "comments": comments }
     };
 
-    fetch(`/invitation/rsvp/${THEME}/${titleCaseName}`, request)
+    fetch(`https://loganservers.com:3000/rsvp/${THEME}/${titleCaseName}`, request)
         .then(checkStatus)
         .then(() => {
             localStorage.setItem(THEME, titleCaseName);
@@ -58,7 +58,7 @@ export function submitRSVP() {
  * Get the current attendees for a given theme.
  */
 export function getRSVPs() {
-    fetch(`/invitation/rsvps/${THEME}`)
+    fetch(`https://loganservers.com:3000/rsvps/${THEME}`)
         .then(checkStatus)
         .then(response => response.json())
         .then((response) => {
