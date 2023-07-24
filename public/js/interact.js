@@ -70,7 +70,7 @@ export function getRSVPs() {
             });
 
             if (response.names.length < response.maxRSVPs) {
-                for (var i = response.names.length; i <= response.maxRSVPs; ++i) {
+                for (var i = response.names.length; i < response.maxRSVPs; ++i) {
                     const blankElem = createElem("p");
                     blankElem.textContent = `${i + 1}. _____________________`;
                     rsvpList.appendChild(blankElem);
