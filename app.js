@@ -7,7 +7,7 @@
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const express = require("express");
-const fs = require("fs/promises");
+const fs = require("fs").promises;
 const winston = require("winston");
 
 /*************************************************************
