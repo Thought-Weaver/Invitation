@@ -57,6 +57,16 @@ h3 {
   color: #F6F1F1;
 }
 
+h4 {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 28px;
+  margin: 0px;
+  margin-bottom: -32px;
+  margin-top: -80px;
+  text-align: center;
+  color: #F6F1F1;
+}
+
 p {
   font-size: 14px;
   text-align: center;
@@ -139,7 +149,7 @@ input, textarea {
 }
 
 #rsvp-form {
-  width: 300px;
+  width: 325px;
   height: 425px;
   display: flex;
   justify-content: center;
@@ -155,7 +165,7 @@ input, textarea {
 }
 
 #rsvp-list {
-  width: 400px;
+  width: 325px;
   height: 500px;
   display: flex;
   justify-content: space-evenly;
@@ -275,6 +285,14 @@ input, textarea {
   position: absolute;
   z-index: -1;
   margin-bottom: 430px;
+}
+
+#ship-wheel-2 {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  z-index: -1;
+  margin-bottom: 440px;
 }
 
 #seahorse-1 {
@@ -430,6 +448,76 @@ input, textarea {
 @media only screen and (max-device-width: 500px) {
   h1 {
     font-size: 48px;
+  }
+
+  #seahorse-1 {
+    top: -48px;
+    right: -64px;
+  }
+  
+  #seahorse-2 {
+    top: -16px;
+    right: -32px;
+  }
+  
+  #seahorse-3 {
+    top: -32px;
+    right: 8px;
+  }
+
+  #shark {
+    top: -24px;
+    left: -142px;
+    rotate: -45deg;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  header {
+    display: none;
+  }
+
+  h3 {
+    font-family: 'Pacifico', sans-serif;
+  }
+
+  h3 {
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 32px;
+    margin-bottom: 6px;
+  }
+
+  h3::after {
+    content: "Under the Sea";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+
+  h4::after {
+    content: "RSVP List";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+
+  #form-container {
+    margin-top: 0px;
+  }
+
+  #rsvp-list-container {
+    margin-top: -32px;
+  }
+
+  #rsvp-list {
+    height: 400px;
+  }
+
+  #ship-wheel-2 {
+    margin-bottom: 340px;
   }
 }
 
