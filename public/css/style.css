@@ -424,6 +424,16 @@ input, textarea {
 }
 
 /**********************************************************
+ * Mobile Display
+ *********************************************************/
+
+@media only screen and (max-device-width: 500px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+/**********************************************************
  * Animations
  *********************************************************/
 
@@ -436,7 +446,7 @@ input, textarea {
     transform: translate(100px);
   }
   100% {
-    bottom: 1080px;
+    bottom: 120%;
     transform: translateX(-200px);
   }
 }
