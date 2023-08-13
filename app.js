@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 3000;
 
 const SERVER_ERROR = "Something went wrong! Please try again later.";
 
-const THEMES = ["under-the-sea"]
+const THEMES = ["under_the_sea"]
 // Typically I can only seat 5 more people at the dinner table.
 const DEFAULT_MAX_RSVPS = 5;
 
@@ -39,16 +39,19 @@ const logger = winston.createLogger({
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ strict: false }));
-app.use(cors());
+app.use(cors({
+    origin: "https://loganapple.com",
+    methods: ["GET", "POST"]
+}));
 
 app.use((req, res, next) => {
-    const allowedOrigins = ["https://invitation.loganservers.com"];
+    const allowedOrigins = ["https://invitation.loganservers.com", "https://loganapple.com"];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
          res.setHeader("Access-Control-Allow-Origin", origin);
     }
 
-	res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+	res.setHeader("Access-Control-Allow-Methods", "GET, POST");
 	res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Accept");
 	next();
 });
@@ -140,6 +143,7 @@ app.get("/rsvps/:theme", async (req, res) => {
         }
 
         let rsvps = await getThemeRSVPs(req.params["theme"]);
+
         res.status(200).json(rsvps);
     } catch (err) {
         logError("GetRSVPs", err.message);

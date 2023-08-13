@@ -7,7 +7,6 @@ import {
     fromName,
     checkStatus,
     handleInteractError,
-    formatTitleCase,
     createElem
 } from "./utils.js";
 
@@ -15,7 +14,7 @@ import {
  * CONSTANTS
  *************************************************************/
 
-const THEME = "under-the-sea";
+const THEME = "under_the_sea";
 
 /*************************************************************
  * FUNCTIONS
@@ -32,7 +31,7 @@ export function submitRSVP() {
     }
 
     const comments = fromName("comments")[0].value;
-    const titleCaseName = formatTitleCase(name);
+    const formattedName = name.replaceAll(" ", "_");
 
     const alreadyAttending = !!localStorage.getItem(THEME);
     if (alreadyAttending) {
@@ -42,13 +41,19 @@ export function submitRSVP() {
 
     const request = { 
         method: "POST",
-        body: { "comments": comments }
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ 
+            "comments": comments
+        })
     };
 
-    fetch(`https://loganservers.com:3000/rsvp/${THEME}/${titleCaseName}`, request)
+    fetch(`https://loganservers.com:3000/rsvp/${THEME}/${formattedName}`, request)
         .then(checkStatus)
         .then(() => {
-            localStorage.setItem(THEME, titleCaseName);
+            localStorage.setItem(THEME, formattedName);
             window.location.href = "./rsvp-list.html";
         })
         .catch(error => handleInteractError(error));
@@ -58,14 +63,23 @@ export function submitRSVP() {
  * Get the current attendees for a given theme.
  */
 export function getRSVPs() {
-    fetch(`https://loganservers.com:3000/rsvps/${THEME}`)
+    const request = { 
+        method: "GET",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        }
+    };
+
+    fetch(`https://loganservers.com:3000/rsvps/${THEME}`, request)
         .then(checkStatus)
         .then(response => response.json())
         .then((response) => {
             const rsvpList = fromId("rsvp-list");
             response.names.forEach((name, index) => {
+                const formattedName = name.replaceAll("_", " ");
                 const nameElem = createElem("p");
-                nameElem.textContent = `${index + 1}. ${name}`;
+                nameElem.textContent = `${index + 1}. ${formattedName}`;
                 rsvpList.appendChild(nameElem);
             });
 
