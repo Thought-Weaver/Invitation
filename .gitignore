@@ -6,3 +6,8 @@ errors.log
 rsvps.json
 server.cert
 server.key
+
+# File Types
+*.docx
+*.pdf
+*.psd

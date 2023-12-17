@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 3000;
 
 const SERVER_ERROR = "Something went wrong! Please try again later.";
 
-const THEMES = ["under_the_sea"]
+const THEMES = ["under_the_sea", "shadow_of_the_masquerade"]
 // Typically I can only seat 5 more people at the dinner table.
 const DEFAULT_MAX_RSVPS = 5;
 

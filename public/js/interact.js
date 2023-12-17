@@ -14,7 +14,7 @@ import {
  * CONSTANTS
  *************************************************************/
 
-const THEME = "under_the_sea";
+const THEME = "shadow_of_the_masquerade";
 
 /*************************************************************
  * FUNCTIONS

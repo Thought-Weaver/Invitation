@@ -3,7 +3,7 @@
  *********************************************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@200;400;700&display=swap');
 
 /**********************************************************
  * Base Elements
@@ -25,24 +25,19 @@ body {
   font-family: 'Lato', sans-serif;
   width: 100%;
   height: 100%;
-  /*
-  background-color: #941414;
-  background: linear-gradient(180deg, rgb(201, 12, 12) 0%, rgb(148, 20, 20) 100%);
-  */
-  background-color: #292929;
-  background: linear-gradient(180deg, rgb(27, 27, 27) 0%, rgb(39, 39, 39), 100%);
+  background-color: #146C94;
+  background: linear-gradient(180deg, rgba(12, 172, 201, 1) 0%, rgba(20, 108, 148, 1) 100%);
   overflow: hidden;
 }
 
 h1 {
-  font-size: clamp(42px, 4.5vw, 64px);
-  font-family: 'Rock Salt', sans-serif;
+  font-size: 72px;
+  font-family: 'Pacifico', sans-serif;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 16px;
   color: #F6F1F1;
   font-weight: 200;
-  line-height: 116px;
 }
 
 h2 {
@@ -83,10 +78,10 @@ p {
 hr {
   width: 80%;
   margin-bottom: 32px;
-  border: #fff 0px solid;
+  border: #F6F1F1 2px solid;
+  border-radius: 12px;
   height: 6px;
-  background-color: rgb(230, 28, 59);
-  border-radius: 2px;
+  background-color: #EE7674;
 }
 
 a {
@@ -109,7 +104,7 @@ input, textarea {
   outline: 0;
   padding: 4px 20px 0;
   font-family: 'Lato', sans-serif;
-  color: #292929;
+  color: #146C94;
   resize: none;
 }
 
@@ -118,10 +113,10 @@ input, textarea {
  *********************************************************/
 
 #error-container {
-  background-color: #292929;
+  background-color: #0e0e0e93;
   padding: 20px;
   border-radius: 12px;
-  border: rgb(255, 170, 43) 3px solid;
+  border: #F6F1F1 3px solid;
   width: auto;
   margin-bottom: 36px;
   width: fit-content;
@@ -130,7 +125,7 @@ input, textarea {
 
 #error-string {
   margin-bottom: 0px;
-  color: rgb(255, 255, 255);
+  color: #EE7674;
 }
 
 #form-container, #rsvp-list-container {
@@ -161,11 +156,11 @@ input, textarea {
   align-items: center;
   flex-direction: column;
   align-self: center;
-  background-color: rgb(36, 36, 36);
+  background-color: #6D4C3D;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 12px;
-  border: rgb(241, 158, 32) 3px solid;
+  border: #F6F1F1 3px solid;
   position: relative;
 }
 
@@ -177,11 +172,11 @@ input, textarea {
   align-items: center;
   flex-direction: column;
   align-self: center;
-  background-color: rgb(36, 36, 36);
+  background-color: #6D4C3D;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 12px;
-  border: rgb(241, 158, 32) 3px solid;
+  border: #F6F1F1 3px solid;
   position: relative;
   margin-top: 64px;
 }
@@ -192,11 +187,11 @@ input, textarea {
 }
 
 #submit-button {
-  background-color: rgb(255, 165, 46);
+  background-color: #EE7674;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
-  color: #292929;
+  color: #F6F1F1;
   cursor: pointer;
   font-size: 18px;
   height: 50px;
@@ -209,7 +204,7 @@ input, textarea {
 }
 
 #submit-button:hover {
-  background-color: #ec8e00;
+  background-color: #f84e4b;
 }
 
 #date {
@@ -226,17 +221,27 @@ input, textarea {
   margin-bottom: -6px;
 }
 
-#mask {
+#shark {
   width: 256px;
   height: 256px;
   position: absolute;
   bottom: 64px;
   left: 0;
   z-index: -1;
-  rotate: -20deg;
+  rotate: 45deg;
 }
 
-#quiche {
+#squid {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  bottom: -32px;
+  left: 55px;
+  margin-bottom: 64px;
+  z-index: -1;
+}
+
+#seaweed1 {
   left: -32px;
 }
 
@@ -248,7 +253,7 @@ input, textarea {
   left: 80px;
 }
 
-#candle-1 {
+#long-seaweed {
   height: 128px;
   position: absolute;
   bottom: 0px;
@@ -256,78 +261,67 @@ input, textarea {
   left: 128px;
 }
 
-#candle-2 {
+#long-seaweed-2 {
   height: 128px;
   position: absolute;
-  bottom: -16px;
+  bottom: 0px;
   z-index: -2;
-  right: 64px;
+  left: 1128px;
 }
 
-#bat {
+#anchor {
   width: 96px;
   height: 96px;
   position: absolute;
   z-index: 1;
+  rotate: 25deg;
   margin-left: 325px;
   margin-top: 400px;
-  rotate: -15deg;
 }
 
-#candelabra {
+#ship-wheel {
   width: 128px;
   height: 128px;
   position: absolute;
   z-index: -1;
-  margin-bottom: 400px;
+  margin-bottom: 430px;
 }
 
-#candle-3 {
+#ship-wheel-2 {
   width: 128px;
   height: 128px;
   position: absolute;
-  bottom: 0px;
+  z-index: -1;
+  margin-bottom: 440px;
+}
+
+#seahorse-1 {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  bottom: 64px;
   right: 0px;
   margin-top: 64px;
   z-index: -1;
 }
 
-#fleur {
+#seahorse-2 {
   width: 128px;
   height: 128px;
   position: absolute;
-  bottom: 128px;
-  right: 64px;
+  bottom: 96px;
+  right: 48px;
   margin-top: 64px;
   z-index: -1;
 }
 
-#candle-4 {
+#seahorse-3 {
   width: 128px;
   height: 128px;
   position: absolute;
-  bottom: 0px;
-  right: 128px;
+  bottom: 32px;
+  right: 96px;
   margin-top: 64px;
-  z-index: -1;
-}
-
-#web {
-  width: 128px;
-  height: 128px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-}
-
-#web-2 {
-  width: 128px;
-  height: 128px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  rotate: 90deg;
   z-index: -1;
 }
 
@@ -335,12 +329,112 @@ input, textarea {
  * Classes
  *********************************************************/
 
-.fixed-size {
+.seaweed {
   width: 128px;
   height: 128px;
   position: absolute;
   bottom: 0px;
   z-index: -1;
+}
+
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background: #F6F1F1;
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: rise 10s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 35%;
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 11s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(5) {
+  width: 35px;
+  height: 35px;
+  left: 55%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  left: 65%;
+  animation-duration: 8s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(7) {
+  width: 90px;
+  height: 90px;
+  left: 70%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(8) {
+  width: 25px;
+  height: 25px;
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(9) {
+  width: 15px;
+  height: 15px;
+  left: 70%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(10) {
+  width: 90px;
+  height: 90px;
+  left: 25%;
+  animation-duration: 10s;
+  animation-delay: 4s;
 }
 
 .hidden {
@@ -356,22 +450,22 @@ input, textarea {
     font-size: 48px;
   }
 
-  #candle-3 {
+  #seahorse-1 {
     top: -48px;
     right: -64px;
   }
   
-  #fleur {
+  #seahorse-2 {
     top: -16px;
     right: -32px;
   }
   
-  #candle-4 {
+  #seahorse-3 {
     top: -32px;
     right: 8px;
   }
 
-  #mask {
+  #shark {
     top: -24px;
     left: -142px;
     rotate: -45deg;
@@ -421,172 +515,26 @@ input, textarea {
   #rsvp-list {
     height: 400px;
   }
+
+  #ship-wheel-2 {
+    margin-bottom: 340px;
+  }
 }
 
 /**********************************************************
- * Fog
+ * Animations
  *********************************************************/
 
-.fogwrapper {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  -webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
-  filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
-}
-
-#foglayer_01, #foglayer_02, #foglayer_03 {
-  height: 100%;
-  position: absolute;
-  width: 200%;
-}
-
-#foglayer_01 .image01, #foglayer_01 .image02,
-#foglayer_02 .image01, #foglayer_02 .image02,
-#foglayer_03 .image01, #foglayer_03 .image02 {
-  float: left;
-  height: 100%;
-  width: 50%;
-}
-
-#foglayer_01 {
-  -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 18s linear infinite;
-  -moz-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 18s linear infinite;
-  animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 18s linear infinite;
-  z-index: -1;
-}
-#foglayer_02, #foglayer_03 {
-  -webkit-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 15s linear infinite;
-  -moz-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 15s linear infinite;
-  animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 15s linear infinite;
-  z-index: -1;
-}
-
-#foglayer_01 .image01, #foglayer_01 .image02 {
-  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png") center center/cover no-repeat transparent;
-  z-index: -1;
-}
-#foglayer_02 .image01, #foglayer_02 .image02,
-#foglayer_03 .image01, #foglayer_03 .image02{
-  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png") center center/cover no-repeat transparent;
-  z-index: -1;
-}
-
-@-webkit-keyframes foglayer_01_opacity {
-  0% { opacity: .05; }
-  22% { opacity: .25; }
-  40% { opacity: .12; }
-  58% { opacity: .2; }
-  80% { opacity: .1; }
-  100% { opacity: .05; }
-}
-@-moz-keyframes foglayer_01_opacity {
-  0% { opacity: .05; }
-  22% { opacity: .25; }
-  40% { opacity: .12; }
-  58% { opacity: .2; }
-  80% { opacity: .1; }
-  100% { opacity: .05; }
-}
-@-o-keyframes foglayer_01_opacity {
-  0% { opacity: .05; }
-  22% { opacity: .25; }
-  40% { opacity: .12; }
-  58% { opacity: .2; }
-  80% { opacity: .1; }
-  100% { opacity: .05; }
-}
-@keyframes foglayer_01_opacity {
-  0% { opacity: .05; }
-  22% { opacity: .25; }
-  40% { opacity: .12; }
-  58% { opacity: .2; }
-  80% { opacity: .1; }
-  100% { opacity: .05; }
-}
-
-@-webkit-keyframes foglayer_02_opacity {
-  0% { opacity: .2; }
-  25% { opacity: .1; }
-  50% { opacity: .05; }
-  80% { opacity: .15; }
-  100% { opacity: .2; }
-}
-@-moz-keyframes foglayer_02_opacity {
-  0% { opacity: .2; }
-  25% { opacity: .1; }
-  50% { opacity: .05; }
-  80% { opacity: .15; }
-  100% { opacity: .2; }
-}
-@-o-keyframes foglayer_02_opacity {
-  0% { opacity: .2; }
-  25% { opacity: .1; }
-  50% { opacity: .05; }
-  80% { opacity: .15; }
-  100% { opacity: .2; }
-}
-@keyframes foglayer_02_opacity {
-  0% { opacity: .2; }
-  25% { opacity: .1; }
-  50% { opacity: .05; }
-  80% { opacity: .15; }
-  100% { opacity: .2; }
-}
-
-@-webkit-keyframes foglayer_03_opacity {
-  0% { opacity: .8 }
-  27% { opacity: .2; }
-  52% { opacity: .6; }
-  68% { opacity: .3; }
-  100% { opacity: .8; }
-}
-@-moz-keyframes foglayer_03_opacity {
-  0% { opacity: .3 }
-  27% { opacity: .1; }
-  52% { opacity: .2; }
-  68% { opacity: .1; }
-  100% { opacity: .3; }
-}
-@-o-keyframes foglayer_03_opacity {
-  0% { opacity: .3 }
-  27% { opacity: .1; }
-  52% { opacity: .2; }
-  68% { opacity: .1; }
-  100% { opacity: .3; }
-}
-@keyframes foglayer_03_opacity {
-  0% { opacity: .3 }
-  27% { opacity: .1; }
-  52% { opacity: .2; }
-  68% { opacity: .1; }
-  100% { opacity: .3; }
-}
-
-@-webkit-keyframes foglayer_moveme {
-  0% { left: 0; }
-  100% { left: -100%; }
-}
-@-moz-keyframes foglayer_moveme {
-  0% { left: 0; }
-  100% { left: -100%; }
-}
-@-o-keyframes foglayer_moveme {
-  0% { left: 0; }
-  100% { left: -100%; }
-}
-@keyframes foglayer_moveme {
-  0% { left: 0; }
-  100% { left: -100%; }
-}
-
-@media only screen
-  and (min-width: 280px)
-  and (max-width: 767px) {
-    #foglayer_01 .image01, #foglayer_01 .image02,
-    #foglayer_02 .image01, #foglayer_02 .image02,
-    #foglayer_03 .image01, #foglayer_03 .image02 {
-      width: 100%;
-    }
+@keyframes rise{
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
   }
+  50% {
+    transform: translate(100px);
+  }
+  100% {
+    bottom: 120%;
+    transform: translateX(-200px);
+  }
+}
