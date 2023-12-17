@@ -45,14 +45,14 @@ app.use(cors({
 }));
 
 app.use((req, res, next) => {
-    const allowedOrigins = ["https://invitation.loganservers.com", "https://loganapple.com"];
+    const allowedOrigins = ["https://invitation.loganservers.com", "https://loganapple.com", "https://loganapple.com/", "https://loganapple.com/invitation", "https://www.loganapple.com", "https://www.loganapple.com/invitation",];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
          res.setHeader("Access-Control-Allow-Origin", origin);
     }
 
 	res.setHeader("Access-Control-Allow-Methods", "GET, POST");
-	res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Accept");
+	res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	next();
 });
 
