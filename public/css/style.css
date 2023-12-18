@@ -63,7 +63,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Pacifico', sans-serif;
+  font-family: 'Rock Salt', sans-serif;
   font-size: 28px;
   margin: 0px;
   margin-bottom: -32px;
@@ -386,21 +386,22 @@ input, textarea {
   }
 
   h3 {
-    font-family: 'Pacifico', sans-serif;
+    font-family: 'Rock Salt', sans-serif;
   }
 
   h3 {
+    margin-top: -36px;
     text-indent: -9999px;
-    line-height: 0;
-    font-size: 32px;
+    line-height: 32px;
+    font-size: 26px;
     margin-bottom: 6px;
   }
 
   h3::after {
-    content: "Under the Sea";
+    content: "Shadow of the Masquerade";
+    font-size: 26px;
     text-indent: 0;
     display: block;
-    line-height: initial;
   }
 
   h4::after {
@@ -408,6 +409,11 @@ input, textarea {
     text-indent: 0;
     display: block;
     line-height: initial;
+  }
+
+  #comments-input {
+    height: 80px;
+    padding-top: 16px;
   }
 
   #form-container {
@@ -420,6 +426,10 @@ input, textarea {
 
   #rsvp-list {
     height: 400px;
+  }
+
+  #candle-1, #candle-2, #candle-3, #candle-4, #quiche, #fleur, #web {
+    display: none;
   }
 }
 
