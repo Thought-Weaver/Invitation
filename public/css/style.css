@@ -220,10 +220,21 @@ input, textarea {
   margin-bottom: 18px;
 }
 
-#rsvp-list-link {
-  font-size: 10px;
+#bottom-text-container {
+  display: flex;
+  flex-direction: row;
   margin-top: 12px;
   margin-bottom: -6px;
+}
+
+#bottom-text-container p {
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 11px;
+}
+
+#rsvp-list-link, #menu-link {
+  font-size: 10px;
 }
 
 #mask {
