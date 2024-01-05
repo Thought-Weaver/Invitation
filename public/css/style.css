@@ -291,6 +291,9 @@ input, textarea {
   position: absolute;
   z-index: -1;
   margin-bottom: 400px;
+  -webkit-animation: candle_movement 6s ease-in-out infinite;
+  -moz-animation: candle_movement 6s ease-in-out infinite;
+  animation: candle_movement 6s ease-in-out infinite;
 }
 
 #candle-3 {
@@ -442,6 +445,39 @@ input, textarea {
   #candle-1, #candle-2, #candle-3, #candle-4, #quiche, #fleur, #web {
     display: none;
   }
+}
+
+/**********************************************************
+ * Animations
+ *********************************************************/
+
+@-webkit-keyframes candle_movement {
+  0% { margin-bottom: 400px; }
+  25% { margin-bottom: 410px; }
+  50% { margin-bottom: 415px; }
+  75% { margin-bottom: 410px; }
+  100% { margin-bottom: 400px; }
+}
+@keyframes candle_movement {
+  0% { margin-bottom: 400px; }
+  25% { margin-bottom: 410px; }
+  50% { margin-bottom: 415px; }
+  75% { margin-bottom: 410px; }
+  100% { margin-bottom: 400px; }
+}
+@-moz-keyframes candle_movement {
+  0% { margin-bottom: 400px; }
+  25% { margin-bottom: 410px; }
+  50% { margin-bottom: 415px; }
+  75% { margin-bottom: 410px; }
+  100% { margin-bottom: 400px; }
+}
+@-o-keyframes candle_movement {
+  0% { margin-bottom: 400px; }
+  25% { margin-bottom: 410px; }
+  50% { margin-bottom: 415px; }
+  75% { margin-bottom: 410px; }
+  100% { margin-bottom: 400px; }
 }
 
 /**********************************************************
