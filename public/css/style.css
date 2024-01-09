@@ -251,14 +251,6 @@ input, textarea {
   left: -32px;
 }
 
-#seaweed3 {
-  left: 48px;
-}
-
-#seaweed4 {
-  left: 80px;
-}
-
 #candle-1 {
   height: 128px;
   position: absolute;
@@ -395,6 +387,10 @@ input, textarea {
 }
 
 @media only screen and (max-height: 700px) {
+  body, html {
+    overflow: hidden;
+  }
+
   header {
     display: none;
   }
@@ -404,7 +400,7 @@ input, textarea {
   }
 
   h3 {
-    margin-top: -36px;
+    margin-top: -22px;
     text-indent: -9999px;
     line-height: 32px;
     font-size: 26px;
@@ -441,8 +437,30 @@ input, textarea {
   #rsvp-list {
     height: 400px;
   }
+  
+  #web-2 {
+    width: 96px;
+    height: 96px;
+  }
 
-  #candle-1, #candle-2, #candle-3, #candle-4, #quiche, #fleur, #web {
+  #mask {
+    width: 144px;
+    height: 144px;
+    top: -16px;
+    left: -32px;
+  }
+
+  #candle-1 {
+    bottom: -16px;
+    left: -32px;
+  }
+
+  #candle-2 {
+    bottom: 0px;
+    left: 32px;
+  }
+
+  #candle-3, #candle-4, #quiche, #fleur, #web {
     display: none;
   }
 }
@@ -489,8 +507,8 @@ input, textarea {
   position: absolute;
   top: 0;
   width: 100%;
-  -webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
-  filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  -webkit-filter: blur(3px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  filter: blur(3px) grayscale(0.2) saturate(1.2) sepia(0.2);
 }
 
 #foglayer_01, #foglayer_02, #foglayer_03 {
@@ -531,94 +549,94 @@ input, textarea {
 }
 
 @-webkit-keyframes foglayer_01_opacity {
-  0% { opacity: .05; }
-  22% { opacity: .25; }
-  40% { opacity: .12; }
-  58% { opacity: .2; }
-  80% { opacity: .1; }
-  100% { opacity: .05; }
+  0% { opacity: .25; }
+  22% { opacity: .45; }
+  40% { opacity: .32; }
+  58% { opacity: .4; }
+  80% { opacity: .3; }
+  100% { opacity: .25; }
 }
 @-moz-keyframes foglayer_01_opacity {
-  0% { opacity: .05; }
-  22% { opacity: .25; }
-  40% { opacity: .12; }
-  58% { opacity: .2; }
-  80% { opacity: .1; }
-  100% { opacity: .05; }
+  0% { opacity: .25; }
+  22% { opacity: .45; }
+  40% { opacity: .32; }
+  58% { opacity: .4; }
+  80% { opacity: .3; }
+  100% { opacity: .25; }
 }
 @-o-keyframes foglayer_01_opacity {
-  0% { opacity: .05; }
-  22% { opacity: .25; }
-  40% { opacity: .12; }
-  58% { opacity: .2; }
-  80% { opacity: .1; }
-  100% { opacity: .05; }
+  0% { opacity: .25; }
+  22% { opacity: .45; }
+  40% { opacity: .32; }
+  58% { opacity: .4; }
+  80% { opacity: .3; }
+  100% { opacity: .25; }
 }
 @keyframes foglayer_01_opacity {
-  0% { opacity: .05; }
-  22% { opacity: .25; }
-  40% { opacity: .12; }
-  58% { opacity: .2; }
-  80% { opacity: .1; }
-  100% { opacity: .05; }
+  0% { opacity: .25; }
+  22% { opacity: .45; }
+  40% { opacity: .32; }
+  58% { opacity: .4; }
+  80% { opacity: .3; }
+  100% { opacity: .25; }
 }
 
 @-webkit-keyframes foglayer_02_opacity {
-  0% { opacity: .2; }
-  25% { opacity: .1; }
-  50% { opacity: .05; }
-  80% { opacity: .15; }
-  100% { opacity: .2; }
+  0% { opacity: .4; }
+  25% { opacity: .3; }
+  50% { opacity: .25; }
+  80% { opacity: .35; }
+  100% { opacity: .4; }
 }
 @-moz-keyframes foglayer_02_opacity {
-  0% { opacity: .2; }
-  25% { opacity: .1; }
-  50% { opacity: .05; }
-  80% { opacity: .15; }
-  100% { opacity: .2; }
+  0% { opacity: .4; }
+  25% { opacity: .3; }
+  50% { opacity: .25; }
+  80% { opacity: .35; }
+  100% { opacity: .4; }
 }
 @-o-keyframes foglayer_02_opacity {
-  0% { opacity: .2; }
-  25% { opacity: .1; }
-  50% { opacity: .05; }
-  80% { opacity: .15; }
-  100% { opacity: .2; }
+  0% { opacity: .4; }
+  25% { opacity: .3; }
+  50% { opacity: .25; }
+  80% { opacity: .35; }
+  100% { opacity: .4; }
 }
 @keyframes foglayer_02_opacity {
-  0% { opacity: .2; }
-  25% { opacity: .1; }
-  50% { opacity: .05; }
-  80% { opacity: .15; }
-  100% { opacity: .2; }
+  0% { opacity: .4; }
+  25% { opacity: .3; }
+  50% { opacity: .25; }
+  80% { opacity: .35; }
+  100% { opacity: .4; }
 }
 
 @-webkit-keyframes foglayer_03_opacity {
-  0% { opacity: .8 }
-  27% { opacity: .2; }
-  52% { opacity: .6; }
+  0% { opacity: .5 }
+  27% { opacity: .3; }
+  52% { opacity: .4; }
   68% { opacity: .3; }
-  100% { opacity: .8; }
+  100% { opacity: .5; }
 }
 @-moz-keyframes foglayer_03_opacity {
-  0% { opacity: .3 }
-  27% { opacity: .1; }
-  52% { opacity: .2; }
-  68% { opacity: .1; }
-  100% { opacity: .3; }
+  0% { opacity: .5 }
+  27% { opacity: .3; }
+  52% { opacity: .4; }
+  68% { opacity: .3; }
+  100% { opacity: .5; }
 }
 @-o-keyframes foglayer_03_opacity {
-  0% { opacity: .3 }
-  27% { opacity: .1; }
-  52% { opacity: .2; }
-  68% { opacity: .1; }
-  100% { opacity: .3; }
+  0% { opacity: .5 }
+  27% { opacity: .3; }
+  52% { opacity: .4; }
+  68% { opacity: .3; }
+  100% { opacity: .5; }
 }
 @keyframes foglayer_03_opacity {
-  0% { opacity: .3 }
-  27% { opacity: .1; }
-  52% { opacity: .2; }
-  68% { opacity: .1; }
-  100% { opacity: .3; }
+  0% { opacity: .5 }
+  27% { opacity: .3; }
+  52% { opacity: .4; }
+  68% { opacity: .3; }
+  100% { opacity: .5; }
 }
 
 @-webkit-keyframes foglayer_moveme {
