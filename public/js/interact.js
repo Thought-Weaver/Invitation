@@ -35,7 +35,7 @@ export function submitRSVP() {
 
     const attendeeName = localStorage.getItem(THEME);
     if (!!attendeeName) {
-        handleInteractError(Error(`${attendeeName} is already on the RSVP list! Please use private mode on the browser to add another guest.`))
+        handleInteractError(Error(`${attendeeName} is already on the RSVP list! Please use private mode on your browser to add another guest.`))
         return;
     }
 
