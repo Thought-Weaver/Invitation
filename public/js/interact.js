@@ -33,9 +33,9 @@ export function submitRSVP() {
     const comments = fromName("comments")[0].value;
     const formattedName = name.replaceAll(" ", "_");
 
-    const alreadyAttending = !!localStorage.getItem(THEME);
-    if (alreadyAttending) {
-        handleInteractError(Error("You're already on the RSVP list!"))
+    const attendeeName = localStorage.getItem(THEME);
+    if (!!attendeeName) {
+        handleInteractError(Error(`${attendeeName} is already on the RSVP list! Please use private mode on the browser to add another guest.`))
         return;
     }
 
