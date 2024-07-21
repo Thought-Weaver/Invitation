@@ -21,8 +21,8 @@ const PORT = process.env.PORT || 3000;
 
 const SERVER_ERROR = "Something went wrong! Please try again later.";
 
-const THEMES = ["under_the_sea", "shadow_of_the_masquerade"]
-// Typically I can only seat 5 more people at the dinner table.
+const THEMES = ["under_the_sea", "shadow_of_the_masquerade", "feast_of_flowers"]
+// Typically I can only seat 5 other people at the dinner table.
 const DEFAULT_MAX_RSVPS = 5;
 
 const logger = winston.createLogger({
@@ -41,7 +41,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ strict: false }));
 app.use(cors({
     origin: "https://loganapple.com",
-    // allowedOrigins: ["https://invitation.loganservers.com", "https://loganapple.com", "https://loganapple.com/", "https://loganapple.com/invitation", "https://www.loganapple.com", "https://www.loganapple.com/", "https://www.loganapple.com/invitation"],
     methods: ["GET", "POST"]
 }));
 

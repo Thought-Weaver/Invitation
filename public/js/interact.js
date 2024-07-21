@@ -14,7 +14,7 @@ import {
  * CONSTANTS
  *************************************************************/
 
-const THEME = "shadow_of_the_masquerade";
+const THEME = "feast_of_flowers";
 
 /*************************************************************
  * FUNCTIONS
