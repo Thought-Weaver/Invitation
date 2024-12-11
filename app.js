@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 3000;
 
 const SERVER_ERROR = "Something went wrong! Please try again later.";
 
-const THEMES = ["under_the_sea", "shadow_of_the_masquerade", "feast_of_flowers"]
+const THEMES = ["call_of_the_storm", "under_the_sea", "shadow_of_the_masquerade", "feast_of_flowers"]
 // Typically I can only seat 5 other people at the dinner table.
 const DEFAULT_MAX_RSVPS = 5;
 
@@ -41,7 +41,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ strict: false }));
 app.use(cors({
     origin: "https://loganapple.com",
-    methods: ["GET", "POST"]
+    methods: ["GET", "POST", "OPTIONS"]
 }));
 
 app.use((req, res, next) => {
