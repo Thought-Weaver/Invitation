@@ -305,10 +305,19 @@ input, textarea {
  *********************************************************/
 
 @media only screen and (max-device-width: 500px) {
+  hr {
+    margin-top: 8px;
+    margin-bottom: 2px;
+  }
+
+  #form-container {
+    margin-top: 0px;
+  }
+
   h1 {
     font-size: 64px;
-    margin: -16px;
     padding: 0;
+    line-height: 64px;
   }
 
   #left-banner-icon, #right-banner-icon {
@@ -368,4 +377,11 @@ input, textarea {
   #rsvp-list {
     height: 400px;
   }
+}
+
+#storm-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
 }

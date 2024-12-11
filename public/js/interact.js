@@ -14,7 +14,7 @@ import {
  * CONSTANTS
  *************************************************************/
 
-const THEME = "feast_of_flowers";
+const THEME = "call_of_the_storm";
 
 /*************************************************************
  * FUNCTIONS
