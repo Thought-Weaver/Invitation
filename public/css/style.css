@@ -284,6 +284,13 @@ input, textarea {
   margin-bottom: 500px;
 }
 
+#storm-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+
 /**********************************************************
  * Classes
  *********************************************************/
@@ -377,11 +384,4 @@ input, textarea {
   #rsvp-list {
     height: 400px;
   }
-}
-
-#storm-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -9999;
 }
