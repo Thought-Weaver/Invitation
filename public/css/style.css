@@ -317,7 +317,7 @@ input, textarea {
     margin-bottom: 2px;
   }
 
-  #form-container {
+  #form-container, #rsvp-list-container {
     margin-top: 0px;
   }
 
