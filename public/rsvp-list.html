@@ -26,39 +26,45 @@
     </div>
     
     <div id="rsvp-list-container">
-      <img id="form-top-icon" src="./img/bifrost.png">
+      <img id="form-top-icon" src="./img/saloon_sign.png">
       <div id="rsvp-list">
         <h4></h4>
       </div>
     </div>
 
-    <canvas id="storm-canvas"></canvas>
-
-    <img id="left-banner-icon" src="./img/bullhorn.png">
-    <div id="water-container">
-      <img class="water" style="--n: 0" src="./img/water.png">
-      <img class="water" style="--n: 1" src="./img/viking-ship.png">
-      <img class="water" style="--n: 2" src="./img/water.png">
-      <img class="water" style="--n: 3" src="./img/water.png">
-      <img class="water" style="--n: 4" src="./img/water.png">
-      <img class="water" style="--n: 5" src="./img/water.png">
-      <img class="water" style="--n: 6" src="./img/water.png">
-      <img class="water" style="--n: 7" src="./img/water.png">
-      <img class="water" style="--n: 8" src="./img/water.png">
-      <img class="water" style="--n: 9" src="./img/viking-ship.png">
-      <img class="water" style="--n: 10" src="./img/water.png">
-      <img class="water" style="--n: 11" src="./img/water.png">
-      <img class="water" style="--n: 12" src="./img/water.png">
-      <img class="water" style="--n: 13" src="./img/water.png">
-      <img class="water" style="--n: 14" src="./img/water.png">
-      <img class="water" style="--n: 15" src="./img/water.png">
-      <img class="water" style="--n: 16" src="./img/water.png">
-      <img class="water" style="--n: 17" src="./img/water.png">
-      <img class="water" style="--n: 18" src="./img/water.png">
-      <img class="water" style="--n: 19" src="./img/water.png">
+    <img id="left-banner-icon" src="./img/horseshoe.png">
+    <div id="bottom-container">
+      <img class="bottom-icon" style="--n: 0" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 1" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 2" src="./img/sign.png">
+      <img class="bottom-icon" style="--n: 3" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 4" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 5" src="./img/cactus.png">
+      <img class="bottom-icon" style="--n: 6" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 7" src="./img/weed.png">
+      <img class="bottom-icon" style="--n: 8" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 9" src="./img/cactus.png">
+      <img class="bottom-icon" style="--n: 10" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 11" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 12" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 13" src="./img/weather-vane.png">
+      <img class="bottom-icon" style="--n: 14" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 15" src="./img/sign.png">
+      <img class="bottom-icon" style="--n: 16" src="./img/cactus_2.png">
+      <img class="bottom-icon" style="--n: 17" src="./img/weed.png">
+      <img class="bottom-icon" style="--n: 18" src="./img/cactus.png">
+      <img class="bottom-icon" style="--n: 19" src="./img/cactus_2.png">
     </div>
-    <img id="right-banner-icon" src="./img/mead.png">
+    <img id="right-banner-icon" src="./img/poster.png">
 
-    <script src="js/rain.js"></script>
+    <ul id="scene" data-friction-x="0.03" data-friction-y="0.05">
+      <li class="layer" id="specks" data-depth="0.1"></li>
+      <li class="layer" id="layer-1" data-depth="0.25">
+        <div class="img" id="dust-1"></div>
+      </li>
+      <li class="layer" id="layer-2" data-depth="0.45">
+        <div class="img" id="dust-2"></div>
+      </li>
+    </ul>
   </body>
 </html>

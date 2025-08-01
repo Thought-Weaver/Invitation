@@ -14,7 +14,7 @@ import {
  * CONSTANTS
  *************************************************************/
 
-const THEME = "showdown_in_the_sands";
+const THEME = "call_of_the_storm";
 
 /*************************************************************
  * FUNCTIONS

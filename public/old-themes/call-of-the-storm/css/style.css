@@ -3,7 +3,7 @@
  *********************************************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@400;700');
 
 /**********************************************************
  * Base Elements
@@ -25,14 +25,13 @@ body {
   font-family: 'Lato', sans-serif;
   width: 100%;
   height: 100%;
-  background-color: rgb(184, 122, 75);
-  /*background: radial-gradient(ellipse at bottom, rgb(77, 50, 30) 0%, rgb(124, 74, 45) 100%);*/
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
   overflow: hidden;
 }
 
 h1 {
-  font-size: clamp(72px, 9vw, 96px);
-  font-family: "Rye", serif;
+  font-size: clamp(84px, 9vw, 108px);
+  font-family: 'Skranji', sans-serif;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 16px;
@@ -59,7 +58,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Rye", serif;
+  font-family: 'Skranji', sans-serif;
   font-size: 28px;
   margin: 0px;
   margin-bottom: -32px;
@@ -205,7 +204,7 @@ input, textarea {
 }
 
 #submit-button:hover {
-  background-color: rgb(53, 150, 61);
+  background-color: rgb(250, 25, 25);
   color: #FFF;
 }
 
@@ -221,17 +220,17 @@ input, textarea {
   display: flex;
   flex-direction: row;
   margin-top: 12px;
-  margin-bottom: -12px;
+  margin-bottom: -6px;
 }
 
 #bottom-text-container p {
   padding-left: 6px;
   padding-right: 6px;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 #rsvp-list-link, #menu-link {
-  font-size: 14px;
+  font-size: 10px;
 }
 
 /**********************************************************
@@ -247,12 +246,16 @@ input, textarea {
   rotate: -20deg;
 }
 
-.bottom-icon {
-  height: 96px;
+.water {
+  height: 128px;
   position: absolute;
-  bottom: -1px;
+  bottom: -20px;
   z-index: -3;
-  right: calc(var(--n) * 96px);
+  right: calc(var(--n) * 119px - 16px);
+}
+
+#water-container:nth-child(even) {
+  bottom: -16px;
 }
 
 #right-banner-icon {
@@ -278,7 +281,14 @@ input, textarea {
   height: 128px;
   position: absolute;
   z-index: -1;
-  margin-bottom: 470px;
+  margin-bottom: 500px;
+}
+
+#storm-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
 }
 
 /**********************************************************
@@ -302,10 +312,6 @@ input, textarea {
  *********************************************************/
 
 @media only screen and (max-device-width: 500px) {
-  body, html {
-    overflow: hidden;
-  }
-
   hr {
     margin-top: 8px;
     margin-bottom: 2px;
@@ -316,17 +322,13 @@ input, textarea {
   }
 
   h1 {
-    font-size: 54px;
+    font-size: 64px;
     padding: 0;
-    line-height: 54px;
+    line-height: 64px;
   }
 
   #left-banner-icon, #right-banner-icon {
     display: none;
-  }
-
-  #bottom-text-container {
-    margin-bottom: 0px;
   }
 }
 
@@ -340,7 +342,7 @@ input, textarea {
   }
 
   h3 {
-    font-family: "Rye", serif;
+    font-family: 'Rock Salt', sans-serif;
   }
 
   h3 {
@@ -352,11 +354,10 @@ input, textarea {
   }
 
   h3::after {
-    content: "Showdown in the Sands";
-    font-family: "Rye", serif;
+    content: "Call of the Storm";
+    font-family: 'Skranji', sans-serif;
     font-size: 42px;
     text-indent: 0;
-    line-height: 42px;
     display: block;
   }
 
@@ -368,8 +369,8 @@ input, textarea {
   }
 
   #comments-input {
-    height: 70px;
-    padding-top: 12px;
+    height: 80px;
+    padding-top: 16px;
   }
 
   #form-container {
@@ -382,76 +383,5 @@ input, textarea {
 
   #rsvp-list {
     height: 400px;
-  }
-
-  #bottom-text-container {
-    margin-bottom: 0px;
-  }
-}
-
-/**********************************************************
- * Bokeh Sand Effect (by Matthew Williams)
- *********************************************************/
-
-#scene {
-  z-index: -4;
-  overflow: hidden;
-}
-
-#scene li {
-  list-style-type: none;
-}
-
-#dust-1, #dust-2 {
-  position: absolute;
-  height: 100000px;
-  width: 100000px;
-  top: -8500px;
-  left: -13000px;
-  animation-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
-  animation-name: float;
-  animation-iteration-count: infinite;
-}
-
-#dust-1 {
-  opacity: 0.25;
-  background: url('https://image.ibb.co/cymRwa/dust3.jpg');
-  background-size: 250px;
-  background-repeat: repeat;
-  animation-duration: 150s;
-}
-
-#dust-2 {
-  opacity: 0.25;
-  background: url('https://image.ibb.co/cymRwa/dust3.jpg');
-  background-repeat: repeat;
-  background-size: 250px;
-  animation-duration: 50s;
-}
-
-@keyframes twinkle {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  30% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0.25;
-  }
-  100% {
-    transform: translate(200px, 100px);
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  100% {
-      transform:translate(12000px, 4000px);
   }
 }
